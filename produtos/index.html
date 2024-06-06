@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo&display=swap">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+</head>
+<style>
+    /* Estilos para a div que contém as imagens */
+    .imagem-container {
+        position: relative;
+        width: 100%; /* largura desejada */
+        height: 750px; /* altura desejada */
+        overflow: hidden; /* para garantir que as imagens não ultrapassem os limites da div */
+        box-shadow: 0 4px 8px rgba(32,32,32,.3);
+    }
+
+    /* Estilos para as imagens */
+    .imagem-container img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity 1s ease-in-out;
+    }
+
+    .nav.nav-scrolled {
+    background-color: #000; /* Cor de fundo preta */
+  }
+/*----------------------------------------------------------------------------------------------------------------*/
+
+#container {
+      color: rgb(6, 6, 6);
+      background-color: rgb(249, 247, 247);
+      width: 45%;
+      height: 430px;
+      overflow: hidden;
+      position: relative;
+    }
+    #content {
+      position: absolute;
+      top: 0;
+      transition: top 0.5s;
+    }
+    #arrow {
+      cursor: pointer;
+      justify-content: center;
+      text-align: center;
+      margin-top: 270px;
+      bottom: 10px;
+      transform: translateX(0%);
+    }
+    
+</style>
+<body>
+    <div id="whatsapp-icon">
+        <a href="https://api.whatsapp.com/send/?phone=5515997433287&text&type=phone_number&app_absent=0" target="_blank">
+            <img src="whatsapp_fixo.png" alt="WhatsApp" width="60px" height="60px">
+        </a>
+    </div>
+    <div class="nav" id="nav">         
+        <div class="logo">
+            <img src="logo.png" alt="" width="160px" height="45px">
+        </div>
+        <h4>EMPRESA</h4>
+        <h4>PRODUTOS</h4>
+        <h4>PARCERIAS</h4>
+        <h4>CONTATOS</h4>
+        <div class="localização">
+            <a href="https://www.google.com/maps/place/Momberg+Group/@-23.4655499,-47.4566592,17z/data=!3m1!4b1!4m6!3m5!1s0x94cf5f3f3707c80d:0x8ce06ebd3f103a1e!8m2!3d-23.4655499!4d-47.4566592!16s%2Fg%2F11h2g63jdj?entry=ttu"><img src="localization.png" alt="" width="25px"></a>
+        </div>
+        <div class="login">
+            <a href="/Login/index.html" class="link-customizado"><h3>Login</h3></a> 
+            <i class='bx bxs-user'></i> 
+        </div>
+        <div class="cadastrar">
+            <a href="/cadastro/index.html"><button><h3>Cadastrar</h3></button></a>  
+        </div>
+    </div>
+    <div class="imagem-container">
+        <!-- As imagens que serão trocadas -->
+        <img class="imagem ativo" src="brabao.png" alt="Imagem 1">
+        <img class="imagem" src="fundao.png" alt="Imagem 2">
+        <img class="imagem" src="brabo.png" alt="Imagem 3">
+        <!-- As bolinhas -->
+        <div class="bolinhas">
+            <span class="bolinha ativo"></span>
+            <span class="bolinha"></span>
+            <span class="bolinha"></span>
+        </div>
+        <div class="retangulo">
+            <h1>NOSSOS PRODUTOS</h1>
+            <h2>Descubra a nova era da inovação em nossos produtos - cada detalhe projetado para transformar sua experiência e superar suas expectativas.</h2>
+            <a href="https://api.whatsapp.com/send/?phone=5515997433287&text&type=phone_number&app_absent=0"><button>Contate-nos</button></a>
+        </div>
+    </div>
+    <div class="pagina">
+        <a href="/principal/index.html"><h4>Início</h4></a><img src="chevron-right-regular-24.png" alt=""><h4>Produtos</h4>
+     </div>
+     <div class="introducao">
+        <h2>Momberg - Produtos Tecnológicos e Inovadores</h2>
+        <div class="paragrafos">
+            <div class="explicacao">
+                <p><h4>A empresa destaca-se no mercado pela sua constante busca por inovação e qualidade em seus produtos. Seus dispositivos eletrônicos são desenvolvidos com tecnologia de ponta,proporcionando assim uma experiência única aos usuários. Além disso, a empresa investe significativamente em pesquisa e desenvolvimento, resultando em produtos cada vez mais sofisticados e adaptados às necessidades do mercado.</h4></p>
+            </div>
+            <div class="moça">
+                <img src="pessoa.png" alt="" height="500px" width="500px">
+            </div>
+        </div>
+     </div>
+     <div class="hrr">
+        <hr>
+    </div>
+     <div class="container">
+        <h3><p>Momberg - Services</p></h3>
+        <div class="container_imagens">
+            <div class="pr-category-card ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+            <div class="hr_altura">
+                <hr>
+            </div>
+            <div class="pr-category-card2 ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+            <div class="hr_altura">
+                <hr>
+            </div>
+            <div class="pr-category-card3 ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+            <div class="hr_altura">
+                <hr>
+            </div>
+            <div class="pr-category-card4 ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+        </div>
+        <div class="container_imagens">
+            <div class="pr-category-card ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+            <div class="hr_altura">
+                <hr>
+            </div>
+            <div class="pr-category-card2 ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+            <div class="hr_altura">
+                <hr>
+            </div>
+            <div class="pr-category-card3 ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+            <div class="hr_altura">
+                <hr>
+            </div>
+            <div class="pr-category-card4 ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+        </div>
+        <div class="container_imagens">
+            <div class="pr-category-card ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+            <div class="hr_altura">
+                <hr>
+            </div>
+            <div class="pr-category-card2 ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+            <div class="hr_altura">
+                <hr>
+            </div>
+            <div class="pr-category-card3 ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+            <div class="hr_altura">
+                <hr>
+            </div>
+            <div class="pr-category-card4 ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+        </div>
+        <div class="container_imagens">
+            <div class="pr-category-card ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+            <div class="hr_altura">
+                <hr>
+            </div>
+            <div class="pr-category-card2 ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+            <div class="hr_altura">
+                <hr>
+            </div>
+            <div class="pr-category-card3 ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+            <div class="hr_altura">
+                <hr>
+            </div>
+            <div class="pr-category-card4 ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+        </div>
+     </div>
+
+     <div class="container2">
+        <h3><p>Momberg - Energy</p></h3>
+        <div class="container_imagens">
+            <div class="pr-category-card ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+            <div class="hr_altura">
+                <hr>
+            </div>
+            <div class="pr-category-card2 ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+            <div class="hr_altura">
+                <hr>
+            </div>
+            <div class="pr-category-card3 ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+            <div class="hr_altura">
+                <hr>
+            </div>
+            <div class="pr-category-card4 ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+        </div>
+        <div class="container_imagens">
+            <div class="pr-category-card ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+            <div class="hr_altura">
+                <hr>
+            </div>
+            <div class="pr-category-card2 ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+            <div class="hr_altura">
+                <hr>
+            </div>
+            <div class="pr-category-card3 ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+            <div class="hr_altura">
+                <hr>
+            </div>
+            <div class="pr-category-card4 ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+        </div>
+        <div class="container_imagens">
+            <div class="pr-category-card ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+            <div class="hr_altura">
+                <hr>
+            </div>
+            <div class="pr-category-card2 ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+            <div class="hr_altura">
+                <hr>
+            </div>
+            <div class="pr-category-card3 ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+            <div class="hr_altura">
+                <hr>
+            </div>
+            <div class="pr-category-card4 ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+        </div>
+        <div class="container_imagens">
+            <div class="pr-category-card ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+            <div class="hr_altura">
+                <hr>
+            </div>
+            <div class="pr-category-card2 ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+            <div class="hr_altura">
+                <hr>
+            </div>
+            <div class="pr-category-card3 ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+            <div class="hr_altura">
+                <hr>
+            </div>
+            <div class="pr-category-card4 ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+        </div>
+     </div>
+
+     <div class="container3">
+        <h3><p>Momberg - TECBOX</p></h3>
+        <div class="container_imagens">
+            <div class="pr-category-card ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+            <div class="hr_altura">
+                <hr>
+            </div>
+            <div class="pr-category-card2 ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+            <div class="hr_altura">
+                <hr>
+            </div>
+            <div class="pr-category-card3 ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+            <div class="hr_altura">
+                <hr>
+            </div>
+            <div class="pr-category-card4 ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+        </div>
+        <div class="container_imagens">
+            <div class="pr-category-card ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+            <div class="hr_altura">
+                <hr>
+            </div>
+            <div class="pr-category-card2 ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+            <div class="hr_altura">
+                <hr>
+            </div>
+            <div class="pr-category-card3 ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+            <div class="hr_altura">
+                <hr>
+            </div>
+            <div class="pr-category-card4 ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+        </div>
+        <div class="container_imagens">
+            <div class="pr-category-card ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+            <div class="hr_altura">
+                <hr>
+            </div>
+            <div class="pr-category-card2 ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+            <div class="hr_altura">
+                <hr>
+            </div>
+            <div class="pr-category-card3 ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+            <div class="hr_altura">
+                <hr>
+            </div>
+            <div class="pr-category-card4 ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+        </div>
+        <div class="container_imagens">
+            <div class="pr-category-card ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+            <div class="hr_altura">
+                <hr>
+            </div>
+            <div class="pr-category-card2 ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+            <div class="hr_altura">
+                <hr>
+            </div>
+            <div class="pr-category-card3 ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+            <div class="hr_altura">
+                <hr>
+            </div>
+            <div class="pr-category-card4 ">
+                <img src="produto1.png" alt="" width="230px" height="300px">
+            </div>
+        </div>
+     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+         const imagens = document.querySelectorAll(".imagem");
+         const bolinhas = document.querySelectorAll(".bolinha");
+     
+         let indiceAtual = 0;
+     
+         // Pré-carregar a primeira imagem
+         window.onload = function() {
+             const primeiraImagem = new Image();
+             primeiraImagem.src = "fundao.png";
+         };
+     
+         function mostrarImagem(indice) {
+             imagens.forEach((imagem) => {
+                 imagem.classList.remove("ativo");
+             });
+             bolinhas.forEach((bolinha) => {
+                 bolinha.classList.remove("ativo");
+             });
+             imagens[indice].classList.add("ativo");
+             bolinhas[indice].classList.add("ativo");
+         }
+     
+         function proximaImagem() {
+             indiceAtual = (indiceAtual + 1) % imagens.length;
+             mostrarImagem(indiceAtual);
+         }
+     
+         // Iniciar a troca de imagens automaticamente
+         setInterval(proximaImagem, 5000);
+     
+         // Adicionar eventos de clique às bolinhas para trocar as imagens manualmente
+         bolinhas.forEach((bolinha, indice) => {
+             bolinha.addEventListener("click", () => {
+                 indiceAtual = indice;
+                 mostrarImagem(indiceAtual);
+             });
+         });
+     });
+     
+         window.onscroll = function() {scrollFunction()};
+     
+     function scrollFunction() {
+       var nav = document.getElementById("nav");
+       if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+         nav.classList.add("nav-scrolled");
+       } else {
+         nav.classList.remove("nav-scrolled");
+       }
+     }
+     //-------------------------------------------------------------------------//
+     </script>
+</body>
+<footer>
+    <h3>MOMBERG - CONTACT</h3>
+    <br>
+    <h4>Alameda SESI, 97 CESO - Sorocaba - SP CEP: 18086-403</h4>
+    <br>
+    <div class="display2">
+        <div class="telefone1">
+            <h4>(15) 3228-2179 / (15) 9 9743-3287</h4>
+        </div>
+        <div class="email">
+            <h4>contato@momberggroup.com.br</h4>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</footer>
+</html>

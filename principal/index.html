@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo&display=swap">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Principal</title>
+</head>
+<style>
+    /* Estilos para a div que contém as imagens */
+    .imagem-container {
+        position: relative;
+        width: 100%; /* largura desejada */
+        height: 750px; /* altura desejada */
+        overflow: hidden; /* para garantir que as imagens não ultrapassem os limites da div */
+        box-shadow: 0 4px 8px rgba(32,32,32,.3);
+    }
+
+    /* Estilos para as imagens */
+    .imagem-container img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity 1s ease-in-out;
+    }
+
+    .nav.nav-scrolled {
+    background-color: #000; /* Cor de fundo preta */
+  }
+/*----------------------------------------------------------------------------------------------------------------*/
+
+#container {
+      color: rgb(6, 6, 6);
+      background-color: rgb(249, 247, 247);
+      width: 45%;
+      height: 430px;
+      overflow: hidden;
+      position: relative;
+    }
+    #content {
+      position: absolute;
+      top: 0;
+      transition: top 0.5s;
+    }
+    #arrow {
+      cursor: pointer;
+      justify-content: center;
+      text-align: center;
+      margin-top: 270px;
+      bottom: 10px;
+      transform: translateX(0%);
+    }
+    
+</style>
+</head>
+<body>
+    <div id="whatsapp-icon">
+        <a href="https://api.whatsapp.com/send/?phone=5515997433287&text&type=phone_number&app_absent=0" target="_blank">
+            <img src="whatsapp_fixo.png" alt="WhatsApp" width="60px" height="60px">
+        </a>
+    </div>
+<!-- Div que contém as imagens -->
+<div class="nav" id="nav">         
+    <div class="logo">
+        <img src="logo.png" alt="" width="160px" height="45px">
+    </div>
+    <h4>EMPRESA</h4>
+    <a href="/produtos/index.html"><h4>PRODUTOS</h4></a>
+    <h4>PARCERIAS</h4>
+    <h4>CONTATOS</h4>
+    <div class="localização">
+        <a href="https://www.google.com/maps/place/Momberg+Group/@-23.4655499,-47.4566592,17z/data=!3m1!4b1!4m6!3m5!1s0x94cf5f3f3707c80d:0x8ce06ebd3f103a1e!8m2!3d-23.4655499!4d-47.4566592!16s%2Fg%2F11h2g63jdj?entry=ttu"><img src="localization.png" alt="" width="25px"></a>
+    </div>
+    <div class="login">
+        <a href="/Login/index.html" class="link-customizado"><h3>Login</h3></a> 
+        <i class='bx bxs-user'></i> 
+    </div>
+    <div class="cadastrar">
+        <a href="/cadastro/index.html"><button><h3>Cadastrar</h3></button></a>  
+    </div>
+</div>
+<div class="imagem-container">
+    <!-- As imagens que serão trocadas -->
+    <img class="imagem ativo" src="brabao.png" alt="Imagem 1">
+    <img class="imagem" src="fundao.png" alt="Imagem 2">
+    <img class="imagem" src="brabo.png" alt="Imagem 3">
+    <!-- As bolinhas -->
+    <div class="bolinhas">
+        <span class="bolinha ativo"></span>
+        <span class="bolinha"></span>
+        <span class="bolinha"></span>
+    </div>
+    <div class="retangulo">
+        <h1>SEJA BEM-VINDO À MOMBERG</h1>
+        <h2>Criar soluções inovadoras para o setor elétrico brasileiro, entregando tecnologia, segurança e produtos duráveis de alta qualidade para nossos clientes.</h2>
+        <h2><p>São 1000m² para atender todas as necessidades do Mercado Fotovoltaico!</p></h2>
+        <a href=""><button>SAIBA MAIS</button></a>
+    </div>
+</div>
+
+
+
+<script>
+   document.addEventListener("DOMContentLoaded", function() {
+    const imagens = document.querySelectorAll(".imagem");
+    const bolinhas = document.querySelectorAll(".bolinha");
+
+    let indiceAtual = 0;
+
+    // Pré-carregar a primeira imagem
+    window.onload = function() {
+        const primeiraImagem = new Image();
+        primeiraImagem.src = "fundao.png";
+    };
+
+    function mostrarImagem(indice) {
+        imagens.forEach((imagem) => {
+            imagem.classList.remove("ativo");
+        });
+        bolinhas.forEach((bolinha) => {
+            bolinha.classList.remove("ativo");
+        });
+        imagens[indice].classList.add("ativo");
+        bolinhas[indice].classList.add("ativo");
+    }
+
+    function proximaImagem() {
+        indiceAtual = (indiceAtual + 1) % imagens.length;
+        mostrarImagem(indiceAtual);
+    }
+
+    // Iniciar a troca de imagens automaticamente
+    setInterval(proximaImagem, 5000);
+
+    // Adicionar eventos de clique às bolinhas para trocar as imagens manualmente
+    bolinhas.forEach((bolinha, indice) => {
+        bolinha.addEventListener("click", () => {
+            indiceAtual = indice;
+            mostrarImagem(indiceAtual);
+        });
+    });
+});
+
+    window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  var nav = document.getElementById("nav");
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    nav.classList.add("nav-scrolled");
+  } else {
+    nav.classList.remove("nav-scrolled");
+  }
+}
+//-------------------------------------------------------------------------//
+</script>
+
+<div class="display1">
+    <div class="conteudo">
+        <div class="escrita">
+            <h2>SOBRE O GRUPO MOMBERG</h2>
+            <br>
+            <h3>Começamos em 2010 prestando soluções industriais de médio e grande porte, atendendo diversos segmentos do mercado como indústrias sucroalcooleiras, agronegócios e rede de hipermercados. Nosso principal pilar sempre foi o compromisso com a qualidade para entregar o melhor em tecnologia para nossos clientes e parceiros.</h3>
+            <br>
+            <h4>CONHEÇA NOSSAS REDES SOCIAIS</h4>
+        </div>
+        <div class="icones">
+            <a href="https://www.facebook.com/momberggroup"><img src="facebook.png" alt="" width="40px" height="40px"></a>
+            <a href="https://www.instagram.com/momberggroup?igshid=NzAzN2Q1NTE%3D"><img src="instagram.png" alt="" width="40px" height="40px"></a>
+            <a href="https://www.linkedin.com/company/momberg/"><img src="linkedin.png" alt="" width="40px" height="40px"></a>
+            <a href="https://api.whatsapp.com/send/?phone=5515997433287&text&type=phone_number&app_absent=0"><img src="whatsapp.png" alt="" width="40px" height="40px"></a>
+        </div>
+    </div>
+    <div class="pessoa">
+        <img src="pessoapensando.png" alt="" height="350px" width="450px">
+    </div>
+</div>
+
+    <div class="hr">
+        <hr>
+    </div>
+    <div class="Produtos">
+        <h2>Conheça nossas linhas de produtos</h2>
+    </div>
+    <div class="container">
+        <div class="cartoes">
+            <div class="services">
+                <div class="serviço">
+                    <h2>MOMBERG</h2>
+                    <h4>SERVICES</h4>
+                </div>
+                <div class="um">
+                    <img src="imagem um.png" alt="" width="330px" height="270px">
+                    <br>
+                    <h3>SERVICES</h3>
+                    <h4>Comissionamento
+                        <p>Start up</p> 
+                        <p>Projetos de automação e controle</p> 
+                        <p>Manutenções preventivas</p> 
+                        <p>Manutenções corretivas</p> 
+                        <p>Projetos elétricos</p>                         
+                    </h4>
+                    <a href="/produtos/index.html"><h5>Servises - products</h5></a>
+                    <hr class="cor">
+                </div>
+            </div>
+            <div class="energia">
+                <div class="energy">
+                    <h2>MOMBERG</h2>
+                    <h4>ENERGY</h4>
+                </div>
+                <div class="dois">
+                    <img src="imagem tres.png" alt="" width="330px" height="270px">
+                    <br>
+                    <h3>ENERGY</h3>
+                    <h4><p>DPS(dispositivo de proteção de surtos)</p> 
+                        <p> QDCA(quadro de distribuição de corrente alternada)</p>
+                        <p>QGBT(quadro geral de baixa tensão)</p>
+                        <p>Interruptor selecionador</p> 
+                        <p>Base fusíveis</p> 
+                        <p>Fusíveis</p> 
+                        <p>Caixas plásticas</p> 
+                        <p>Caixas metálicas</p> 
+                    </h4>
+                    <a href="/produtos/index.html"><h5>Energy - products</h5></a>
+                    <hr class="cor">
+                </div>
+            </div>
+            <div class="tecbox">
+                <div class="tecboxx">
+                    <h2>TECBOX</h2>
+                </div>
+                <div class="tres">
+                    <img src="imagem dois.png" alt="" width="330px" height="270px">
+                    <br>
+                    <h3>TECBOX</h3>
+                    <h4><p>TECBOX 1000VDC</p> 
+                        <p>TECBOX 1500VDC</p> 
+                        <p>TECBOX MONITORADA</p> 
+                        <p>TECBOX INTEGRADAS</p> 
+                    </h4>
+                    <a href="/produtos/index.html"><h5>TECBOX - products</h5></a>
+                    <hr class="cor">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container_grande">
+        <div id="container">
+            <h2>Quais as vantagens de ter TECBOX® em meu sistema fotovoltaico?</h2>
+            <div id="content">
+            <div class="p1">
+                <div class="escrita1">
+                <p>Utilizamos componentes comprovadamente mais seguros e eficientes;</p>
+                </div>
+                <div>
+                <img src="email-de-saida.png" alt="" width="70px" height="70px">
+                </div>
+            </div>
+            <div class="p2">
+                <div class="escrita2">
+                <p>O projeto e processo de construção da TECBOX® é feito conforme todas as normas vigentes;</p>
+                </div>
+                <div>
+                <img src="engrenagens.png" alt="" width="70px" height="70px">
+                </div>
+            </div>
+            <div class="p3">
+                <div class="escrita3">
+                <p>Além disso, podemos projetar ela de forma customizada, de acordo com a necessidade do seu projeto.</p>
+                </div>
+                <div>
+                <img src="definicoes.png" alt="" width="70px" height="70px">
+                </div>
+            </div> 
+            </div>
+            <div id="arrow">
+            <img src="imagem_rolar.png" alt="">
+            </div>
+        </div>
+        <div class="cor_preta">
+            <div class="carousel3">
+                <div class="carousel-content3">
+                    <img class="carousel-item3" src="imagem1.png" alt="Imagem 1">
+                    <img class="carousel-item3" src="imagem2.png" alt="Imagem 2">
+                    <img class="carousel-item3" src="imagem3.png" alt="Imagem 3">
+                    <img class="carousel-item3" src="imagem4.png" alt="Imagem 4">
+                    <img class="carousel-item3" src="imagem5.png" alt="Imagem 5">
+                </div>
+                <div class="indicators">
+                    <div class="indicator"></div>
+                    <div class="indicator"></div>
+                    <div class="indicator"></div>
+                    <div class="indicator"></div>
+                    <div class="indicator"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <div class="hr">
+        <hr>
+      </div>
+
+      <div class="parcerias">
+        <h2>PARCERIAS</h2>
+        <div class="parceiross">
+            <div class="primeiro">
+                <img src="" alt="">
+                <hr>
+                <h4>É especializada no desenvolvimento e produção em grande volume de módulos condutores altamente complexos feitos de compósitos metal-plástico.</h4>
+            </div>
+            <div class="segundo">
+                <img src="" alt="">
+                <hr>
+                <h4>É especializada no desenvolvimento e produção em grande volume de módulos condutores altamente complexos feitos de compósitos metal-plástico.</h4>
+            </div>
+            <div class="terceiro">
+                <img src="" alt="">
+                <hr>
+                <h4>É especializada no desenvolvimento e produção em grande volume de módulos condutores altamente complexos feitos de compósitos metal-plástico.</h4>
+            </div>
+            <div class="quarto">
+                <img src="" alt="">
+                <hr>
+                <h4>É especializada no desenvolvimento e produção em grande volume de módulos condutores altamente complexos feitos de compósitos metal-plástico.</h4>
+            </div>
+            <div class="quinto">
+                <img src="" alt="">
+                <hr>
+                <h4>É especializada no desenvolvimento e produção em grande volume de módulos condutores altamente complexos feitos de compósitos metal-plástico.</h4>
+            </div>
+        </div>
+        <div class="hr4">
+            <hr>
+          </div>
+      </div>
+    <div class="carousel">
+        <h2>AVALIAÇÕES</h2>
+        <div class="carousel-content">
+            <div class="first">
+                <h4><p>Ótimo serviço e atendimento. Fui muito bem atendida, recomendo para todos que posso.</p></h4>
+                <h4><p>"Ivete Sampaio, Cliente Momberg"</p></h4>
+            </div>
+            <div class="secund">
+                <h4><p>Vale muito á pena! Comprei para substituir algumas Strings antigas e acabei comprando para o resto do projeto todo.</p></h4>
+                <h4><p>"José Almeida, Cliente Momberg"</p></h4>
+            </div>
+            <div class="tre">
+                <h4><p>Me surpriendi com a qualidade. Conheci a empresa na INTERSOLAR e desde então em minhas instalações eu só utilizo a TECBOX. É a melhor combiner do mercado!</p></h4>
+                <h4><p>"Rodrigo Martins, Cliente Momberg"</p></h4>
+            </div>
+            <div class="for">
+                <h4><p>A melhor String que eu já usei. No começo eu estava com dúvida se valeria á pena, mas depois de conversar com o Depto. de Engenharia da Momberg só utilizo TECBOX em meus projetos.</p></h4>
+                <h4><p>"Cézar Cardoso, Cliente Momberg"</p></h4>
+            </div>
+          <!-- Adicione mais textos conforme necessário -->
+        </div>
+        <div class="esquerda"><img src="chevron-left-regular-36.png" alt="Seta"></div>
+        <div class="direita"><img src="chevron-right-regular-36.png" alt="Seta"></div>
+    </div>   
+<footer>
+    <h3>MOMBERG - CONTACT</h3>
+    <br>
+    <h4>Alameda SESI, 97 CESO - Sorocaba - SP CEP: 18086-403</h4>
+    <br>
+    <div class="display2">
+        <div class="telefone1">
+            <h4>(15) 3228-2179 / (15) 9 9743-3287</h4>
+        </div>
+        <div class="email">
+            <h4>contato@momberggroup.com.br</h4>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</footer>
+
+</body>
+</html>

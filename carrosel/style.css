@@ -1,0 +1,131 @@
+body{
+    font-family: 'Archivo', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.873);
+    margin-top: 200px;
+    height: 350px;
+  }
+
+  .carousel h2{
+    justify-content: center;
+    text-align: center;
+    margin-top: 76px;
+    font: 400px;
+    color: #FFAA0A;
+  }
+  
+  .carousel-content {
+    width: 67%;
+    display: flex;
+    transition: transform 0.5s ease; /* Adicionamos transição para um movimento suave */
+  }
+
+  .carousel-content h4{
+    margin-left: 80px;
+    font-size: 15px;
+  }
+
+  .first{
+    
+  }
+
+  .first h4{
+    width: 500px;
+    margin-left: 500px;
+    justify-content: center;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .secund{
+    
+  }
+
+  .secund h4{
+    width: 500px;
+    margin-left: 500px;
+    justify-content: center;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .tre{
+    
+  }
+
+  .tre h4{
+    width: 500px;
+    margin-left: 500px;
+    justify-content: center;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .for{
+    
+  }
+
+  .for h4{
+    width: 500px;
+    margin-left: 500px;
+    justify-content: center;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .carousel-content2 {
+    display: flex;
+    transition: transform 0.5s ease; /* Adicionamos transição para um movimento suave */
+  }
+  
+  .carousel-content p {
+    justify-content: center;
+    text-align: center;
+    margin-right: 20px;
+  }
+
+  .carousel-content2 p {
+    margin-right: 20px;
+  }
+  
+  .direita i{
+    position: absolute;
+    top: 37%;
+    transform: translateY(-50%);
+    padding: 10px 1360px;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    margin-top: 90px;
+  }
+
+  .esquerda i{
+    position: absolute;
+    top: 37%;
+    transform: translateY(-50%);
+    padding: 10px 100px;
+    border: none;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    margin-top: 90px;
+  }
+  
+  .prev-direita i{
+    left: 100px;
+  }
+  
+  .next-esquerda i{
+    right: 100px;
+  }
+  
+  

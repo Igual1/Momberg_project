@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel</title>
+    <style>
+        .carousel3 {
+            overflow: hidden;
+            width: 590px;
+            height: 590px;
+            position: relative;
+        }
+
+        .carousel-content3 {
+            display: flex;
+            transition: transform 1s ease;
+        }
+
+        .carousel-item3 {
+            flex: 0 0 500px;
+            height: 600px;
+        }
+
+        .indicators {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            z-index: 2;
+        }
+
+        .indicator {
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.5); /* Bolinhas transparentes */
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .indicator.active {
+            background-color: rgba(255, 255, 255, 0.9); /* Bolinha da imagem atual */
+        }
+    </style>
+</head>
+<body>
+    <div class="carousel3">
+        <div class="carousel-content3">
+            <img class="carousel-item" src="imagem1.png" alt="Imagem 1">
+            <img class="carousel-item" src="imagem2.png" alt="Imagem 2">
+            <img class="carousel-item" src="imagem3.png" alt="Imagem 3">
+            <img class="carousel-item" src="imagem4.png" alt="Imagem 4">
+            <img class="carousel-item" src="imagem5.png" alt="Imagem 5">
+        </div>
+        <div class="indicators">
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+            <div class="indicator"></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const carouselContent = document.querySelector('.carousel-content3');
+            const carouselItems = document.querySelectorAll('.carousel-item3');
+            const indicators = document.querySelectorAll('.indicator');
+            const totalItems = carouselItems.length;
+            let currentIndex = 0;
+
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % totalItems;
+                updateCarousel();
+            }, 3000);
+
+            function updateCarousel() {
+                const offset = -currentIndex * 600 + 'px';
+                carouselContent.style.transform = `translateX(${offset})`;
+
+                // Atualiza a opacidade das bolinhas indicadoras
+                indicators.forEach((indicator, index) => {
+                    if (index === currentIndex) {
+                        indicator.classList.add('active');
+                    } else {
+                        indicator.classList.remove('active');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

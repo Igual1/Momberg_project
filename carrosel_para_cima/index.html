@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo&display=swap">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="style.css">
+  <title>Scrolling Text</title>
+  <style>
+    #container {
+      color: rgb(6, 6, 6);
+      background-color: rgb(249, 247, 247);
+      width: 50%;
+      height: 430px;
+      overflow: hidden;
+      position: relative;
+    }
+    #content {
+      position: absolute;
+      top: 0;
+      transition: top 0.5s;
+    }
+    #arrow {
+      cursor: pointer;
+      justify-content: center;
+      text-align: center;
+      margin-top: 270px;
+      bottom: 10px;
+      transform: translateX(0%);
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h2>Quais as vantagens de ter TECBOX® em meu sistema fotovoltaico?</h2>
+    <div id="content">
+      <div class="p1">
+        <div class="escrita1">
+          <p>Utilizamos componentes comprovadamente mais seguros e eficientes;</p>
+        </div>
+        <div>
+          <img src="email-de-saida.png" alt="" width="70px" height="70px">
+        </div>
+      </div>
+      <div class="p2">
+        <div class="escrita2">
+          <p>O projeto e processo de construção da TECBOX® é feito conforme todas as normas vigentes;</p>
+        </div>
+        <div>
+          <img src="engrenagens.png" alt="" width="70px" height="70px">
+        </div>
+      </div>
+      <div class="p3">
+        <div class="escrita3">
+          <p>Além disso, podemos projetar ela de forma customizada, de acordo com a necessidade do seu projeto.</p>
+        </div>
+        <div>
+          <img src="definicoes.png" alt="" width="70px" height="70px">
+        </div>
+      </div> 
+    </div>
+    <div id="arrow">
+      <img src="imagem_rolar.png" alt="">
+    </div>
+  </div>
+  <script>
+    const container = document.getElementById('container');
+    const content = document.getElementById('content');
+    const arrow = document.getElementById('arrow');
+
+    let currentIndex = 0;
+    const totalItems = content.children.length;
+
+    arrow.addEventListener('click', () => {
+      currentIndex++;
+      if (currentIndex >= totalItems) {
+        currentIndex = 0;
+      }
+      let itemHeight = content.children[currentIndex].offsetTop;
+      if (currentIndex === 0) {
+        itemHeight += 20;
+      } else {
+        itemHeight -= 10;
+      }
+      content.style.top = `-${itemHeight}px`;
+    });
+  </script>
+</body>
+</html>

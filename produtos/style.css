@@ -1,0 +1,687 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+@media screen and (max-widht: 768px) {
+    .nav{
+        width: 50%;
+    }
+}
+
+body{
+    background-color: rgb(251, 248, 248) ;
+    color: black;
+    font-family: 'Archivo', sans-serif;
+    overflow-x: hidden;  /* Largura fixa do conteúdo */
+}
+
+
+#whatsapp-icon {
+    position: fixed;
+    bottom: 20px; /* Distância do fundo */
+    right: 20px; /* Distância da direita */
+    z-index: 9999; /* Garante que o ícone esteja acima de outros elementos */
+}
+
+@keyframes shake {
+    0% { transform: translate(0, 0); }
+    10%, 90% { transform: translate(-1px, 0); }
+    20%, 80% { transform: translate(1px, 0); }
+    30%, 50%, 70% { transform: translate(-1px, 0); }
+    40%, 60% { transform: translate(1px, 0); }
+    100% { transform: translate(0, 0); }
+}
+#whatsapp-icon img {
+    animation: shake 1.2s infinite;
+}
+
+.imagem-container .imagem {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.imagem-container .imagem.ativo {
+    opacity: 1;
+    transition-delay: 0.2s; /* Adiciona um atraso à transição da imagem ativa */
+}
+
+
+.nav{
+    color: #f8f5f5;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    display: flex;
+    width: 100%;
+    gap: 30px;
+    height: 80px;
+    box-shadow: 10px 10px 15px rgba(3, 3, 3, 0.3);
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo com transparência */
+    transition: background-color 0.5s ease; /* Suaviza a transição da cor de fundo */
+}
+
+.nav h4{
+    justify-content: center;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 34px;
+    margin-left: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    color: #f8f5f5;
+}
+
+.nav h4:hover{
+    color: #FFAA0A; 
+}
+
+.nav img{
+    margin-top: 18px;
+}
+
+.nav a{
+    text-decoration: none; /* Remove o sublinhado padrão */
+}
+
+.logo{
+    top: 0;
+    margin-top: 1px;
+    margin-left: 20px;
+}
+
+.input-box input{
+    background-color: transparent;
+}
+
+.login{
+    display: flex;
+    gap: 8px;
+    margin-top: 28px;
+    font-size: 14px;
+    margin-left: 0px;
+}
+
+.localização img{
+    margin-top: 20px;
+    margin-left: 570px;
+}
+
+.localização img{
+    transition: box-shadow 0.6s;
+}
+
+.localização img:hover{
+    transform: scale(1.07); 
+}
+
+.login i{
+    margin-top: 2px;
+}
+
+.link-customizado {
+    color: inherit; /* Herda a cor do texto do elemento pai */
+    text-decoration: none; /* Remove o sublinhado padrão */
+}
+
+.link-customizado:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse sobre o link */
+}
+
+.link-customizado:visited {
+    color: inherit; /* Mantém a cor do texto do elemento pai para links visitados */
+}
+
+.cadastrar{
+    margin-top: 23px;
+    color: #fff;
+}
+
+.cadastrar h3{
+    font-size: 14px;
+}
+
+.cadastrar button{
+    background: #FFAA0A;
+    color: white;
+    border: 1.8px solid white;
+    padding: 4px 10px;
+    transition: background-color 1.0s ease;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cadastrar button:hover{
+    background-color: #161616;
+}
+
+.retangulo{
+    color: black;
+    position: absolute;
+    top: 30%;
+    left: 16%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    margin-left: 100px;
+    height: 280px;
+    margin-top: 10px;
+    border-radius: 4px;
+    width: 466px;
+    padding: 20px; 
+    margin-top: 200px;
+    box-shadow: 10px 10px 15px rgba(3, 3, 3, 0.3);
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.8);/* Cor de fundo com opacidade */
+}
+
+.retangulo p{
+    margin-top: -24px;
+}
+
+.retangulo h1{
+    font-size: 2.4rem;
+    color: #3a3a3a;
+    font-weight: 600;
+    margin-bottom: 24px;
+    line-height: 1.2;
+}
+
+.retangulo h2{
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-bottom: 1em;
+    color: #3a3a3a;
+    font-weight: 0;
+    margin-bottom: 24px;
+    line-height: 1.2;
+}
+
+.retangulo button{
+    box-shadow: 0 4px 8px rgba(32,32,32,.3);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    text-transform: uppercase;
+    background: #FFAA0A;
+    font-weight: 600;
+    line-height: 1.25;
+    font-size: 1.2rem;
+    padding: 16px 24px;
+    transition: box-shadow 3.6s;
+    transition: 1.5s;
+    cursor: pointer;
+}
+
+.retangulo button:hover{
+    transform: scale(1); 
+    background-color: #161616;
+}
+
+.display1{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 40px;
+    height: 400px;
+}
+
+.conteudo{
+    flex-direction: column;
+}
+
+.escrita{
+    height: 250px;
+}
+
+.escrita h2{
+    width: 100%;
+    float: left;
+    font-size: 40px;
+    font-weight: bolder;
+    color: #333;
+    width: 400px;
+}
+
+.escrita h3{
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+    width: 340px;
+    margin-top: 10px;
+}
+
+.escrita h4{
+    float: left;
+    clear: both;
+    padding: 10px 0px;
+    font-size: 18px;
+    font-weight: bolder;
+    color: #FFAA0A;
+}
+
+.icones{
+    display: flex;
+    gap: 8px;
+}
+
+.icones img{
+    transition: box-shadow 0.6s;
+}
+
+.icones img:hover{
+    transform: scale(1.03); 
+}
+
+/*---------------------------------------------------------------------------*/
+
+
+.carousel3 {
+    overflow: hidden;
+    border-radius: 10px;
+    width: 590px;
+    height: 590px;
+    position: relative;
+}
+
+.carousel-content3 {
+    display: flex;
+    transition: transform 1s ease;
+}
+
+.carousel-item3 {
+    flex: 0 0 0px;
+    height: 600px;
+}
+
+.indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5); /* Bolinhas transparentes */
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.indicator.active {
+    background-color: rgba(255, 255, 255, 0.9); /* Bolinha da imagem atual */
+}
+
+.container_grande{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+.imagem-container {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Ajuste conforme necessário */
+    overflow: hidden;
+}
+
+.imagem {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.imagem.ativo {
+    opacity: 1;
+}
+
+.bolinhas {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bolinha {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.bolinha.ativo {
+    background-color: #888; /* Mudar para a cor desejada */
+}
+
+
+/*-----------------------------------------------------------*/
+
+.pagina{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: #3a3a3a;
+    margin-top: 30px;
+    margin-left: 200px;
+    gap: 3px;
+}
+
+.pagina h4{
+    margin-top: 5px;
+}
+
+.pagina a{
+    text-decoration: none; /* Remove o sublinhado padrão */
+    position: relative;
+    color: #3a3a3a;
+}
+  
+  .pagina a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Define a distância da linha para a palavra */
+    left: 0;
+    width: 37px;
+    height: 1.5px; /* Define a espessura da linha */
+    background-color: #3a3a3a; /* Cor da linha */
+    transform: scaleX(0); /* Esconde a linha inicialmente */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave */
+  }
+  
+  .pagina a:hover::after {
+    transform: scaleX(1); /* Mostra a linha quando o mouse passa por cima */
+  }
+
+  .container{
+    width: 100%;
+    padding-right: 16px;
+    padding-left: 16px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .container h3{
+    color: #3a3a3a;
+    font-weight: 600;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    margin-left: 600px;
+    margin-top: 20px;
+    font-size: 1.8rem;
+  }
+
+  .container2{
+    width: 100%;
+    padding-right: 16px;
+    padding-left: 16px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 200px;
+  }
+
+  .container2 h3{
+    color: #3a3a3a;
+    font-weight: 600;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    margin-left: 600px;
+    margin-top: 20px;
+    font-size: 1.8rem;
+  }
+
+  .container3{
+    width: 100%;
+    padding-right: 16px;
+    padding-left: 16px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 200px;
+  }
+
+  .container3 h3{
+    color: #3a3a3a;
+    font-weight: 600;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    margin-left: 600px;
+    margin-top: 20px;
+    font-size: 1.8rem;
+  }
+
+  [style*=--aspect-ratio] img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+style attribute {
+    --aspect-ratio: 1/1;
+}
+
+  .pr-category-card {
+    --text-smaller: .833rem;
+    line-height: 1.2;
+    border-bottom: 2px solid gray;
+    padding: 10px;
+    transition: all .2s;
+    cursor: pointer;
+}
+
+.container_imagens{
+    display: flex;
+    gap: 0px;
+    justify-content: center;
+    margin-right: 50px;
+}
+
+.pr-category-card img{
+    margin-top: -28px;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+.pr-category-card2 {
+    --text-smaller: .833rem;
+    line-height: 1.2;
+    border-bottom: 2px solid gray;
+    border-left: 2px solid gray;
+    padding: 10px;
+    transition: all .2s;
+    cursor: pointer;
+}
+
+.pr-category-card2 img{
+    margin-top: -28px;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+.pr-category-card3 {
+    --text-smaller: .833rem;
+    line-height: 1.2;
+    border-bottom: 2px solid gray;
+    border-left: 2px solid gray;
+    padding: 10px;
+    transition: all .2s;
+    cursor: pointer;
+}
+
+.pr-category-card3 img{
+    margin-top: -28px;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+.pr-category-card4 {
+    --text-smaller: .833rem;
+    line-height: 1.2;
+    border-bottom: 2px solid gray;
+    border-left: 2px solid gray;
+    padding: 10px;
+    transition: all .2s;
+    cursor: pointer;
+}
+
+.pr-category-card4 img{
+    margin-top: -28px;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+/*--------------------------------------------------------------------------*/
+
+.introducao{
+    margin-left: 138px;
+    margin-top: 30px;
+    padding: 60px;
+    color: #0f4763;
+    font-weight: 300;
+    justify-content: center;
+    margin-left: 100px;
+}
+
+.introducao h2{
+    font-size: 1.728rem;
+    margin-bottom: 24px;
+    font-weight: 300;
+    line-height: 1.2em;
+}
+
+.introducao h4{
+    color: #3a3a3a;
+    width: 600px;
+}
+
+.paragrafos{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 1em;
+    width: 940px;
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+.moça{
+    margin-top: -220px;
+}
+
+.paragrafos h2{
+    
+}
+
+.paragrafos p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-bottom: 1em;
+    margin-inline-end: 0px;
+}
+
+.hrr{
+    margin-left: 150px;
+    width: 1200px;
+}
+
+
+
+/*----HOVERS----*/
+
+.pr-category-card:hover{
+    transform: scale(1.001);
+    box-shadow: 1px 0px 10px rgba(8, 8, 8, 0.8);
+}
+
+.pr-category-card2:hover{
+    transform: scale(1.001);
+    box-shadow: 1px 0px 10px rgba(8, 8, 8, 0.8);
+}
+
+.pr-category-card3:hover{
+    transform: scale(1.001);
+    box-shadow: 1px 0px 10px rgba(8, 8, 8, 0.8);
+}
+
+.pr-category-card4:hover{
+    transform: scale(1.001);
+    box-shadow: 1px 0px 10px rgba(8, 8, 8, 0.8);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------*/
+
+footer{
+    text-align: center;
+    color: #3a3a3a;
+    background-color: #edf0f3;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-top: 300px;
+}
+
+
+.telefone1{
+    display: flex;
+    gap: 4px;
+}
+
+.telefone1 h4{
+    margin-top: 10px;
+}
+
+.email h4{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.email{
+    display: flex;
+}
+
+
+.display2{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    color: #0098a1;
+}
+
